@@ -61,22 +61,27 @@ The development server will be available at http://localhost:3000
 
 - The spec doesn't say to make the application responsive, but will try where we can.  
 
+- Could use a CSS preprocessing tool like SASS, but given the small size we won't need variables and nesting. Maybe if the application needs to scale.
+
+- If one location query fails we should still show some data if the other queries succeed.
+
 
 ## Future work
 
-- Could add a DB, and login functionality to add more locations if more offices are opened. 
+- Could add a DB, login functionality and admin section to add more locations if more offices are opened. 
 
 - No mentions of tests, will add some functional tests, and a docker option to run these, if time allows. Will use jest.
+
+- There is rate limiting in place on this API. The current rate limit is 15 requests per second with a burst of 30. To reduce the chance of errors we could build a microservice (API Gateway) to cache and decode the response into only the fields that we need. 
 
 
 ## Tasks:
 
- - Initital app created using vite and docker to run locally. Estimated time: 2 hours
+ - ~~Initital app created using vite and docker to run locally. Estimated time: 2 hours~~
 
- - Get data for the state from the police API, 
-    need to be able to look for multiple locations, see if the API can support this, instead of 4 seperate calls. Estimated time: 2 hours.
+ - ~~Get data for the state from the police API, need to be able to look for multiple locations, see if the API can support this, instead of 4 seperate calls. Estimated time: 2 hours.~~
 
- - Create a clean easy to use page with a table to display all the crimes. Estimated time: 2 hours.
+ - Create a clean easy to use page with a table to display all the crimes using material-ui. Estimated time: 2 hours.
 
  - Add options to filter and search. Estimated time: 1 hour
 
