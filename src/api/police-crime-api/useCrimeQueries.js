@@ -3,11 +3,11 @@ import { fetchCrimes } from './fetchCrimes';
 import { locations } from './locations';
 
 // hook to fetch crime data for all office locations in locations.js
-export function useCrimeQueriesByLocations() {
+export function useCrimeQueriesByLocations(yearMonth) {
   // useQueries hook runs multiple queries in parallel
   return useQueries({
     queries: locations.map((location) => ({
-      queryKey: ['crimes', { lat: location.lat, lng: location.lng }],
+      queryKey: ['crimes', { lat: location.lat, lng: location.lng, yearMonth: yearMonth }],
       queryFn: fetchCrimes,
       select: (data) => {
         //transform crime data for only the fields needed in
