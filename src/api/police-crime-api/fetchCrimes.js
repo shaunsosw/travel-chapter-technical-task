@@ -17,5 +17,3 @@ export const fetchCrimes = async ({ queryKey }) => {
   }
   return response.json();
 }; 
-
-//@todo add a method to get outcomes for a given crime id

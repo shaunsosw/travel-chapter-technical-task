@@ -1,4 +1,4 @@
-import { useCrimeQueriesByLocations } from '../api/police-crime-api/useCrimeQueries';
+import { useCrimeQueriesByLocations } from './useCrimeQueries';
 
 export function useCrimeQueriesResults(selectedMonth) {
   const queryResults = useCrimeQueriesByLocations(selectedMonth);

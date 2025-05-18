@@ -21,3 +21,19 @@
   .MuiTableCell-root:nth-child(3) { width: 20%; }
   .MuiTableCell-root:nth-child(4) { width: 20%; }
   .MuiTableCell-root:nth-child(5) { width: 5%; }
+
+
+.expanded-content {
+  border: none !important;
+  padding: 16px 8px 16px 40px;
+}
+
+/* Remove top border from the row after the expanded row */
+.expanded-row + tr > td {
+  border-top: none !important;
+}
+
+/* Select all <td> cells in a row that is immediately before a row with the class expanded-row */
+tr:has(+ .expanded-row) > td {
+  border-bottom: none !important;
+}

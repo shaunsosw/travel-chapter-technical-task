@@ -78,6 +78,8 @@ The development server will be available at http://localhost:3000
 
 * React Query refetches data from the police API when the page is reloaded, as the cache lives in Javascript memory. Could use react-query-persist-client to persist the cache in localStorage. 
 
+* Could add CI/CD to run tests once generated
+
 
 ## Tasks:
 
@@ -89,6 +91,8 @@ The development server will be available at http://localhost:3000
 
  * ~~Add options to filter and search. Estimated time: 1 hour~~
 
- * Add ability to show outcomes. Estimated time: 2 hours
+ * ~~Add ability to show outcomes. Estimated time: 2 hours~~
+
+ * Add tests. Estimated time: 1-2 hours
 
 

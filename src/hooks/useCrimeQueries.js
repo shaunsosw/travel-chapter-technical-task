@@ -1,6 +1,6 @@
 import { useQueries } from '@tanstack/react-query';
-import { fetchCrimes } from './fetchCrimes';
-import { locations } from './locations';
+import { fetchCrimes } from '../api/police-crime-api/fetchCrimes';
+import { locations } from '../api/police-crime-api/locations';
 
 // hook to fetch crime data for all office locations in locations.js
 export function useCrimeQueriesByLocations(yearMonth) {
@@ -14,6 +14,7 @@ export function useCrimeQueriesByLocations(yearMonth) {
         return data.map(crime => ({
           id: crime.id,
           officeLocation: location.id,
+          persistentId: crime.persistent_id,
           category: crime?.category || 'No category',
           outcome: crime.outcome_status?.category || 'No outcome',
           location: crime?.location?.street?.name || 'No location',

@@ -1,0 +1,14 @@
+
+// Fetch crime outcomes for a given persistent id
+// yearMonth format: YYYY-MM e.g. 2025-03
+export const fetchCrimeOutcomes = async ({ queryKey }) => {
+  const [_key, { persistentId }] = queryKey;
+
+  let url = `https://data.police.uk/api/outcomes-for-crime/${persistentId}`;
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Network response was not ok for persistentId=${persistentId}`);
+  }
+  return response.json();
+}; 
