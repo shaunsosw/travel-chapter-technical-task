@@ -37,3 +37,36 @@
 tr:has(+ .expanded-row) > td {
   border-bottom: none !important;
 }
+
+.table-container th {
+  background: #247078;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.table-container td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-container tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.table-container tr:hover {
+  background: #e0e1dd;
+  transition: background 0.2s;
+}
+
+.table-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(34, 34, 59, 0.09);
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.table-container table {
+  min-width: 600px;
+}
