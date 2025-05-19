@@ -20,7 +20,7 @@ To start the development server run either of the following commands ( both must
 
 ```bash
 # Using Docker Compose (recommended) 
-docker-compose up
+docker compose up
 
 # Or using npm
 npm install
@@ -28,6 +28,19 @@ npm run dev
 ```
 
 The development server will be available at http://localhost:3000
+
+## Tests
+Tests can be ran by running:
+
+```bash
+# Using Docker Compose (recommended) 
+docker compose run test
+
+
+# Or using npm
+npm install
+npm test --watchAll=false
+```
 
 ## Project Structure
 
@@ -58,6 +71,8 @@ The development server will be available at http://localhost:3000
 
 * If one location query fails we should still show some data if the other queries succeed.
 
+* Added pagingation to the table using material-ui TablePagination, application is faster, and easier to control as a user. Also added a way to 
+
 
 ## Considerations
 
@@ -68,9 +83,10 @@ The development server will be available at http://localhost:3000
 * Could use a CSS preprocessing tool like SASS, but given the small size we won't need variables and nesting. Maybe if the application needs to scale.
 
 
+
 ## Future work
 
-* Could add a DB, login functionality and admin section to add more locations if more offices are opened. 
+* Would add a DB, login functionality and admin section to add more locations if more offices are opened. 
 
 * No mentions of tests, will add some functional tests, and a docker option to run these, if time allows. Will use jest.
 
@@ -78,7 +94,15 @@ The development server will be available at http://localhost:3000
 
 * React Query refetches data from the police API when the page is reloaded, as the cache lives in Javascript memory. Could use react-query-persist-client to persist the cache in localStorage. 
 
-* Could add CI/CD to run tests once generated
+* Would add CI/CD to; install dependencies, run the build, and run tests. Would use something like CircleCI or Github Actions
+
+* Add google map to show the location of the crime when clicking the dropdown. 
+
+* Add jsdoc for readability on functions. 
+
+* Table is really difficult to display data on a mobile device. The tables data is too large to see scrollbar. We could:
+    * Use a card layout if the user is on mobile, instead of the table view.
+    * Hide certain columns such as category. And allow to be collapsible for more information.
 
 
 ## Tasks:
