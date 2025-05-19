@@ -1,6 +1,10 @@
 # React Police Data API 
 
-A modern React single page application with Docker containerization.
+A modern React single page application (SPA) with Docker containerization. 
+This application was built to view all crimes close to the office locations of Travel Chapter Ltd.
+It uses the Police API for street level crime,  available at https://data.police.uk/docs/method/crime-street/. The SPA is built to be used on desktops. 
+
+![GIF of application](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzN4NDllMXNzeDhsZmlieHZoN2VmZHBudGszZno4YnN1eThxdXN6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JsxzsugoPh25cy3UFK/giphy.gif)
 
 ## Features
 
@@ -11,8 +15,8 @@ A modern React single page application with Docker containerization.
 
 ## Prerequisites
 
-- Node.js 20 or later
-- Docker and Docker Compose
+- Node.js lts or later
+- Docker and Docker Compose https://docs.docker.com/compose/install/
 
 ## Development
 
@@ -21,6 +25,8 @@ To start the development server run either of the following commands ( both must
 ```bash
 # Using Docker Compose (recommended) 
 docker compose up
+# Using older Compose command:
+docker-compose up
 
 # Or using npm
 npm install
@@ -35,23 +41,12 @@ Tests can be ran by running:
 ```bash
 # Using Docker Compose (recommended) 
 docker compose run test
-
+# Using older Compose command:
+docker-compose run test
 
 # Or using npm
 npm install
 npm test --watchAll=false
-```
-
-## Project Structure
-
-```
-.
-├── src/               # Source files
-├── public/            # Static files
-├── Dockerfile         # Production Docker configuration
-├── Dockerfile.dev     # Development Docker configuration
-├── docker-compose.yml # Docker Compose configuration
-└── package.json       # Project dependencies and scripts
 ```
 
 
@@ -117,6 +112,6 @@ npm test --watchAll=false
 
  * ~~Add ability to show outcomes. Estimated time: 2 hours~~
 
- * Add tests. Estimated time: 1-2 hours
+ * ~~Add tests. Estimated time: 1-2 hours~~
 
 
