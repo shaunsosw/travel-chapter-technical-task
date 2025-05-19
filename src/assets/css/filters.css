@@ -1,0 +1,68 @@
+.filters-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-bar > * {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(34, 34, 59, 0.07);
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .crime-search-filter, .month-filter, .office-filter {
+    width: 250px;
+  }
+
+  .filter-bar {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-bar > * {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(34, 34, 59, 0.07);
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .crime-search-filter, .month-filter, .office-filter {
+    width: 250px;
+  }
+  
+/* Responsive for mobile & Tablets */
+@media only screen and (max-width: 1080px) {
+  
+    .flex-spacer {
+      display: none;
+    }
+  
+    .crime-search-filter, .month-filter, .office-filter {
+      justify-content: center;
+      .MuiTablePagination-input, 
+      .MuiPickersSectionList-root,
+      .MuiSelect-select,
+      .MuiSelect-nativeInput {
+        padding: 0.4rem;
+      }
+      padding: 0.4rem;
+      input {
+        padding: 0.4rem;
+      }
+    }
+}

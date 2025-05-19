@@ -45,32 +45,6 @@ h1 {
   margin-top: 0.5rem;
 }
 
-.filters-row {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.filters-row > * {
-  min-width: 200px;
-  height: auto;
-  margin: 0 !important;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-}
-
-.crime-search {
-  width: 250;
-}
-
-.office-filter {
-  width: 250px;
-}
-
-
 .app-message {
   margin-top: 2rem;
   font-size: 1.2em;
@@ -105,7 +79,6 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-
 .header {
   color: #22223b;
   font-size: 3rem;
@@ -114,17 +87,17 @@ h1 {
   letter-spacing: 1px;
 }
 
-.filter-bar {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.filter-bar > * {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(34, 34, 59, 0.07);
-  padding: 0.5rem 1rem;
-  border: none;
-  font-size: 1rem;
+/* Responsive for mobile & Tablets */
+@media only screen and (max-width: 1080px) {
+  #root {
+    max-width: 90%;
+    min-width: 90%;
+    padding: 0;
+  }
+  .table-container {
+    width: unset;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
 }

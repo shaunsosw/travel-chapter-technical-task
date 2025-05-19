@@ -17,7 +17,7 @@ export function FiltersNavigationBar({
   return (
     <div className="filters-row">
       <CrimeSearchFilter search={search} setSearch={setSearch} />
-      <div style={{ flex: 1 }} />
+      <div className="flex-spacer" style={{ flex: 1 }} />
       <MonthFilter selectedMonth={selectedMonth} onMonthChange={onMonthChange} />
       <OfficeFilter
         officeLocations={officeLocations}

@@ -8,12 +8,12 @@ export function MonthFilter({ selectedMonth, onMonthChange }) {
   const [pickerValue, setPickerValue] = useState(selectedMonth ? dayjs(selectedMonth) : null);
 
   // Sync local picker value if selectedMonth changes from outside
+  // This decouples the picker's temporary value from the parent state until the user is finished selecting a month & year
   useEffect(() => {
     setPickerValue(selectedMonth ? dayjs(selectedMonth) : null);
   }, [selectedMonth]);
 
   const today = dayjs();
-  
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker

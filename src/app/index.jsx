@@ -1,4 +1,5 @@
 import '../assets/css/app.css';
+import '../assets/css/filters.css';
 import React, { useState, useEffect } from 'react';
 import { FiltersNavigationBar } from '../components/navigation/FiltersNavigationBar';
 import { CrimeTable } from '../components/table/CrimeTable';
