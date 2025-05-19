@@ -9,10 +9,11 @@ import { locations } from '../../api/police-crime-api/locations';
 const mockCrimeData = [
   {
     id: 'foo',
-    persistent_id: 'pid1',
+    officeLocation: 'wales',
+    persistentId: 'pid1',
     category: 'foobar',
-    outcome_status: { category: 'no outcome' },
-    location: { street: { name: 'foobar nightclub' } },
+    outcome: 'no outcome',
+    location: 'foobar nightclub',
     month: '2025-03',
   },
 ];
@@ -48,7 +49,7 @@ describe('useCrimeQueriesByLocations', () => {
       expect(query.data).toEqual([
         {
           id: 'foo',
-          officeLocation: locations[idx].id,
+          officeLocation: "wales",
           persistentId: 'pid1',
           category: 'foobar',
           outcome: 'no outcome',
