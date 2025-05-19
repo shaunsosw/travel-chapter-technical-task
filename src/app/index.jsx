@@ -79,7 +79,7 @@ function App() {
           : (
             <ErrorMessage>
               No crime data available for the selected locations and month. 
-              Try selecting a more recent month, that is more than a month ago.
+              Try selecting a recent month, that is more than a month ago.
               </ErrorMessage>
           )}
 
