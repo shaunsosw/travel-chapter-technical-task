@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCrimeOutcomes } from '../../hooks/useCrimeOutcomes';
-import CircularProgress from '@mui/material/CircularProgress';
 
+// Dropdown of outcomes for a crime in an ordered list
 export function CrimeOutcomes({ persistentId }) {
   const {
     outcomes,

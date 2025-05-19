@@ -1,7 +1,7 @@
 import '../assets/css/app.css';
 import React, { useState, useEffect } from 'react';
 import { FiltersNavigationBar } from '../components/navigation/FiltersNavigationBar';
-import { CrimeTable } from '../components/tables/CrimeTable';
+import { CrimeTable } from '../components/table/CrimeTable';
 import { StatusMessage } from '../components/messages/StatusMessage';
 import { WarningMessage } from '../components/messages/WarningMessage';
 import { ErrorMessage } from '../components/messages/ErrorMessage';
@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>UK Crime Data</h1>
+        <h1>UK Crime near Travel Chapter Office Locations</h1>
       </header>
       <FiltersNavigationBar
         selectedMonth={selectedMonth}
